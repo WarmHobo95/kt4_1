@@ -1,53 +1,36 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter demo',
-      theme: ThemeData(
-        colorScheme:
-            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 34, 34, 34)),
-        useMaterial3: true,
-      ),
-      home: const Scaffold(
-        body: MyWidget(),
-      ),
-    );
-  }
-}
-
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
-
-  @override
-  Widget build(BuildContext context){
-  return Column(
-    children: [
-      Container(
-        color: Colors.amber,
-        width: 100,
-        padding: EdgeInsets.symmetric(vertical: 100),
-        child: const Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children:[
-          Icon(Icons.ac_unit, size: 50, color: Colors.white,),
-          Icon(Icons.file_download_done),
-          Icon(Icons.earbuds),
-          ],
+  runApp(Container(
+    padding: const EdgeInsets.all(30),
+    color: const Color.fromARGB(255, 34, 34, 34),
+    child: const Column(children: <Widget> [
+     Row(children: <Widget> [
+      Text(
+        "Log in to",
+        textAlign: TextAlign.left,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 40,
         ),
+        
+        
+
       ),
-      Expanded(
-        child: Container(
-          color: Colors.white10),
+      Text(
+        "Nexus",
+        textAlign: TextAlign.left,
+        style: TextStyle(
+          color: Color.fromARGB(255, 164, 129, 64),
+          fontSize: 40,
+          fontWeight: FontWeight.bold,
+        ),
+
       ),
-    ],
-  );
-  }
+     ],
+
+     )
+    ]),
+  ));
 }
+
